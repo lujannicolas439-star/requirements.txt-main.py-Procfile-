@@ -1,11 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 import os
 
-app = Flask(__name__)
+# Aquí le decimos a Flask que busque en 'plantillas' en lugar de 'templates'
+app = Flask(__name__, template_folder='plantillas')
 
 @app.route('/')
 def home():
-    return "Bot de Growth Flow activo"
+    return render_template('index.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
