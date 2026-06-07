@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 import os
 
-# Aquí le decimos a Flask que busque en 'plantillas' en lugar de 'templates'
-app = Flask(__name__, template_folder='plantillas')
+# Aquí le decimos a Flask que busque en 'template' en lugar de 'plantillas'
+app = Flask(__name__, plantillas_folder='template)
 
 @app.route('/')
 def home():
